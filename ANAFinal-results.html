@@ -1,0 +1,3964 @@
+<!DOCTYPE html>
+<html class="ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>Results: ANAFinal.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c section > table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c section > pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c div > table,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c div > pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c article > table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c article > pre,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j section > table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j section > pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j div > table,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j div > pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j article > table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j article > pre,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c p.note, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c p.warning, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c p.error, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c p.fatal,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j p.note, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j p.warning, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j p.error, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j p.fatal,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.c > table.layoutcontainer, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.l table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.l pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.l p.note,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.l p.warning, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.l p.error, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.l p.fatal { margin-left: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.c table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.c pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.c p.note,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.c p.warning, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.c p.error, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r p.note,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r table, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r pre, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r p.note,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r p.warning, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r p.error, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion.r p.fatal { margin-right: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf article, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf aside, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf details, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf figcaption, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf figure, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf footer, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf header, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf hgroup, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf nav, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf section { display: block }
+html.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf { font-size: 100% }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf ul, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf dd { margin: 0 0 0 40px }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf nav ul, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf img { border: 0; vertical-align: middle }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf svg:not(:root) { overflow: hidden }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf figure { margin: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf table { border-collapse: collapse; border-spacing: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf p { margin-top: 0; text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf h1.heading1 { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf h2.heading2 { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf h3.heading3 { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf h4.heading4 { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf h5.heading5 { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf h6.heading6 { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf span { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf table { margin-bottom: 1em }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf td, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf td[class$="fixed"], .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf th[class$="fixed"] { white-space: pre }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf section, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf article { padding-top: 1px; padding-bottom: 8px }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .stacked-value { text-align: left; display: block }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .stacked-cell > .stacked-value, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf td.data > td.data, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf th.data > td.data, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf th.data > th.data, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf td.data > th.data, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf th.header > th.header { border: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .stacked-cell > div.data { border-width: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > p { margin: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch { display: table }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .toc { display: none }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .proc_note_group, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .proc_title_group { margin-bottom: 1em }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf p.proctitle { margin: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf p.note, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf p.warning, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf p.error, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf p.fatal { display: table }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .notebanner, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .warnbanner, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .errorbanner, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .fatalbanner,
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .notecontent, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .warncontent, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .errorcontent, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .notebanner, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .warnbanner, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .errorbanner, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .fatalbanner { padding-right: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body > div > ol li { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .c { text-align: center }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .r { text-align: right }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .l { text-align: left }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .j { text-align: justify }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .d { text-align: right }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .b { vertical-align: bottom }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .m { vertical-align: middle }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .t { vertical-align: top }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .accessiblecaption {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf a:active { color: #800080 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch { border: hidden; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > colgroup > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > colgroup, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > * > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer > tfoot { border: none; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .cell, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contentfolder, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contentproclabel, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .data, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .graph > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .graph > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .graph { border: hidden; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .heading1, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .heading2, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .heading3, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .heading4, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .heading5, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .indexaction, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutcontainer, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf a:link { color: #0000ff }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list3, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list4, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list5, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list6, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list7, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list8, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem3, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem4, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem5, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem6, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem7, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem8, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .output > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .output > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .output { border: hidden; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pagesproclabel, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > colgroup > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > colgroup, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > * > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip > tfoot { border: none; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter10, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter2, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter3, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter4, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter5, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter6, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter7, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter8, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle10, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle2, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle3, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle4, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle5, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle6, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle7, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle8, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > colgroup > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > colgroup, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > * > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer > tfoot { border: none; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .table > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .table > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .table { border: hidden; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > colgroup > col, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > colgroup, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > * > tr, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > thead, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > tbody, .ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer > tfoot { border: none; }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf a:visited { color: #800080 }
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_3bb0d89d-de20-4527-88d8-b77cd26d5bdf .warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_3bb0d89d-de20-4527-88d8-b77cd26d5bdf" class="c body">
+<h1 class="body toc">Results: ANAFinal.sas</h1>
+<section data-name="Freq" data-sec-type="proc">
+<div id="IDX" class="proc_title_group">
+<p class="c proctitle">The FREQ Procedure</p>
+</div>
+<h1 class="contentprocname toc">The Freq Procedure</h1>
+<section>
+<h1 class="contentfolder toc">Table COVIDCONCERN * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;COVIDCONCERN&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">COVIDCONCERN</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">287</div>
+<div class="r t">3.51</div>
+<div class="r t">62.53</div>
+<div class="r t">4.99</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">172</div>
+<div class="r t">2.10</div>
+<div class="r t">37.47</div>
+<div class="r t">7.10</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">459</div>
+<div class="r t">5.61</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">108</div>
+<div class="r t">1.32</div>
+<div class="r t">78.83</div>
+<div class="r t">1.88</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">29</div>
+<div class="r t">0.35</div>
+<div class="r t">21.17</div>
+<div class="r t">1.20</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">137</div>
+<div class="r t">1.68</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">2</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">158</div>
+<div class="r t">1.93</div>
+<div class="r t">74.53</div>
+<div class="r t">2.75</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">54</div>
+<div class="r t">0.66</div>
+<div class="r t">25.47</div>
+<div class="r t">2.23</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">212</div>
+<div class="r t">2.59</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">3</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">144</div>
+<div class="r t">1.76</div>
+<div class="r t">77.42</div>
+<div class="r t">2.50</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">42</div>
+<div class="r t">0.51</div>
+<div class="r t">22.58</div>
+<div class="r t">1.73</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">186</div>
+<div class="r t">2.28</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">4</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">537</div>
+<div class="r t">6.57</div>
+<div class="r t">75.00</div>
+<div class="r t">9.33</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">179</div>
+<div class="r t">2.19</div>
+<div class="r t">25.00</div>
+<div class="r t">7.39</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">716</div>
+<div class="r t">8.76</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">5</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">270</div>
+<div class="r t">3.30</div>
+<div class="r t">81.08</div>
+<div class="r t">4.69</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">63</div>
+<div class="r t">0.77</div>
+<div class="r t">18.92</div>
+<div class="r t">2.60</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">333</div>
+<div class="r t">4.07</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">6</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">501</div>
+<div class="r t">6.13</div>
+<div class="r t">79.40</div>
+<div class="r t">8.71</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">130</div>
+<div class="r t">1.59</div>
+<div class="r t">20.60</div>
+<div class="r t">5.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">631</div>
+<div class="r t">7.72</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">7</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">946</div>
+<div class="r t">11.57</div>
+<div class="r t">76.05</div>
+<div class="r t">16.44</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">298</div>
+<div class="r t">3.65</div>
+<div class="r t">23.95</div>
+<div class="r t">12.30</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1244</div>
+<div class="r t">15.22</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">8</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">528</div>
+<div class="r t">6.46</div>
+<div class="r t">74.26</div>
+<div class="r t">9.18</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">183</div>
+<div class="r t">2.24</div>
+<div class="r t">25.74</div>
+<div class="r t">7.56</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">711</div>
+<div class="r t">8.70</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">9</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2274</div>
+<div class="r t">27.82</div>
+<div class="r t">64.13</div>
+<div class="r t">39.53</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1272</div>
+<div class="r t">15.56</div>
+<div class="r t">35.87</div>
+<div class="r t">52.52</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3546</div>
+<div class="r t">43.38</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of COVIDCONCERN by RATEHEALTH</p>
+</div>
+<article id="IDX1" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">9</td>
+<td class="r data">165.4238</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">9</td>
+<td class="r data">167.7351</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">25.3124</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.1423</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.1408</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.1423</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for COVIDCONCERN by RATEHEALTH</p>
+</div>
+<article id="IDX2" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">25.3124</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">9</td>
+<td class="r data">165.4036</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">9</td>
+<td class="r data">165.4036</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX3">
+<h1 class="contentfolder toc">Table GENDER * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;GENDER&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">GENDER</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3361</div>
+<div class="r t">41.11</div>
+<div class="r t">69.46</div>
+<div class="r t">58.42</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1478</div>
+<div class="r t">18.08</div>
+<div class="r t">30.54</div>
+<div class="r t">61.02</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4839</div>
+<div class="r t">59.19</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2392</div>
+<div class="r t">29.26</div>
+<div class="r t">71.70</div>
+<div class="r t">41.58</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">944</div>
+<div class="r t">11.55</div>
+<div class="r t">28.30</div>
+<div class="r t">38.98</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3336</div>
+<div class="r t">40.81</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of GENDER by RATEHEALTH</p>
+</div>
+<article id="IDX4" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">4.7783</td>
+<td class="r data">0.0288</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">4.7921</td>
+<td class="r data">0.0286</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Continuity Adj. Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">4.6712</td>
+<td class="r data">0.0307</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">4.7777</td>
+<td class="r data">0.0288</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data" style="white-space: nowrap">-0.0242</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.0242</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data" style="white-space: nowrap">-0.0242</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX5" aria-label="Fisher&amp;apos;s Exact Test">
+<h1 class="contentitem toc">Fisher&apos;s Exact Test</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fisher&apos;s Exact Test">
+<caption aria-label="Fisher&apos;s Exact Test"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fisher&apos;s Exact Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Cell (1,1) Frequency (F)</th>
+<td class="r data">3361</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Left-sided Pr &lt;= F</th>
+<td class="r data">0.0152</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Right-sided Pr &gt;= F</th>
+<td class="r data">0.9866</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Table Probability (P)</th>
+<td class="r data">0.0018</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Two-sided Pr &lt;= P</th>
+<td class="r data">0.0301</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX6" aria-label="Relative Risk Estimates">
+<h1 class="contentitem toc">Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Relative Risk Estimates">
+<caption aria-label="Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="r data">0.8974</th>
+<td class="r data">0.8144</td>
+<td class="r data">0.9889</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="r data">0.9687</th>
+<td class="r data">0.9416</td>
+<td class="r data">0.9965</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="r data">1.0794</th>
+<td class="r data">1.0077</td>
+<td class="r data">1.1562</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for GENDER by RATEHEALTH</p>
+</div>
+<article id="IDX7" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">4.7777</td>
+<td class="r data">0.0288</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">1</td>
+<td class="r data">4.7777</td>
+<td class="r data">0.0288</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">1</td>
+<td class="r data">4.7777</td>
+<td class="r data">0.0288</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX8" aria-label="Common Relative Risk Estimates">
+<h1 class="contentitem toc">Common Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Common Relative Risk Estimates">
+<caption aria-label="Common Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Common Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Method</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.8974</td>
+<td class="r data">0.8144</td>
+<td class="r data">0.9889</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.8974</td>
+<td class="r data">0.8144</td>
+<td class="r data">0.9889</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.9687</td>
+<td class="r data">0.9416</td>
+<td class="r data">0.9965</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.9687</td>
+<td class="r data">0.9416</td>
+<td class="r data">0.9965</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">1.0794</td>
+<td class="r data">1.0077</td>
+<td class="r data">1.1562</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">1.0794</td>
+<td class="r data">1.0077</td>
+<td class="r data">1.1562</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX9">
+<h1 class="contentfolder toc">Table MARRIAGE * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;MARRIAGE&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">MARRIAGE</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2438</div>
+<div class="r t">29.82</div>
+<div class="r t">65.08</div>
+<div class="r t">42.38</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1308</div>
+<div class="r t">16.00</div>
+<div class="r t">34.92</div>
+<div class="r t">54.00</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3746</div>
+<div class="r t">45.82</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3315</div>
+<div class="r t">40.55</div>
+<div class="r t">74.85</div>
+<div class="r t">57.62</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1114</div>
+<div class="r t">13.63</div>
+<div class="r t">25.15</div>
+<div class="r t">46.00</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4429</div>
+<div class="r t">54.18</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of MARRIAGE by RATEHEALTH</p>
+</div>
+<article id="IDX10" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">92.8160</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">92.6409</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Continuity Adj. Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">92.3483</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">92.8047</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data" style="white-space: nowrap">-0.1066</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.1060</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data" style="white-space: nowrap">-0.1066</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX11" aria-label="Fisher&amp;apos;s Exact Test">
+<h1 class="contentitem toc">Fisher&apos;s Exact Test</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fisher&apos;s Exact Test">
+<caption aria-label="Fisher&apos;s Exact Test"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fisher&apos;s Exact Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Cell (1,1) Frequency (F)</th>
+<td class="r data">2438</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Left-sided Pr &lt;= F</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Right-sided Pr &gt;= F</th>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Table Probability (P)</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Two-sided Pr &lt;= P</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX12" aria-label="Relative Risk Estimates">
+<h1 class="contentitem toc">Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Relative Risk Estimates">
+<caption aria-label="Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="r data">0.6264</th>
+<td class="r data">0.5693</td>
+<td class="r data">0.6891</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="r data">0.8695</th>
+<td class="r data">0.8447</td>
+<td class="r data">0.8951</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="r data">1.3882</th>
+<td class="r data">1.2982</td>
+<td class="r data">1.4845</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for MARRIAGE by RATEHEALTH</p>
+</div>
+<article id="IDX13" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">92.8047</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">1</td>
+<td class="r data">92.8047</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">1</td>
+<td class="r data">92.8047</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX14" aria-label="Common Relative Risk Estimates">
+<h1 class="contentitem toc">Common Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Common Relative Risk Estimates">
+<caption aria-label="Common Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Common Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Method</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.6264</td>
+<td class="r data">0.5693</td>
+<td class="r data">0.6891</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.6264</td>
+<td class="r data">0.5693</td>
+<td class="r data">0.6891</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.8695</td>
+<td class="r data">0.8447</td>
+<td class="r data">0.8951</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.8695</td>
+<td class="r data">0.8447</td>
+<td class="r data">0.8951</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">1.3882</td>
+<td class="r data">1.2982</td>
+<td class="r data">1.4845</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">1.3882</td>
+<td class="r data">1.2982</td>
+<td class="r data">1.4845</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX15">
+<h1 class="contentfolder toc">Table EMPLOYMENT * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;EMPLOYMENT&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">EMPLOYMENT</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">574</div>
+<div class="r t">7.02</div>
+<div class="r t">69.41</div>
+<div class="r t">9.98</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">253</div>
+<div class="r t">3.09</div>
+<div class="r t">30.59</div>
+<div class="r t">10.45</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">827</div>
+<div class="r t">10.12</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2035</div>
+<div class="r t">24.89</div>
+<div class="r t">83.03</div>
+<div class="r t">35.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">416</div>
+<div class="r t">5.09</div>
+<div class="r t">16.97</div>
+<div class="r t">17.18</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2451</div>
+<div class="r t">29.98</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">2</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2809</div>
+<div class="r t">34.36</div>
+<div class="r t">72.27</div>
+<div class="r t">48.83</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1078</div>
+<div class="r t">13.19</div>
+<div class="r t">27.73</div>
+<div class="r t">44.51</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3887</div>
+<div class="r t">47.55</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">3</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">335</div>
+<div class="r t">4.10</div>
+<div class="r t">33.17</div>
+<div class="r t">5.82</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">675</div>
+<div class="r t">8.26</div>
+<div class="r t">66.83</div>
+<div class="r t">27.87</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1010</div>
+<div class="r t">12.35</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of EMPLOYMENT by RATEHEALTH</p>
+</div>
+<article id="IDX16" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">3</td>
+<td class="r data">865.8400</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">3</td>
+<td class="r data">810.8911</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">384.5629</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.3254</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.3095</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.3254</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for EMPLOYMENT by RATEHEALTH</p>
+</div>
+<article id="IDX17" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">384.5629</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">3</td>
+<td class="r data">865.7340</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">3</td>
+<td class="r data">865.7340</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX18">
+<h1 class="contentfolder toc">Table DEPRESSION * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;DEPRESSION&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">DEPRESSION</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4672</div>
+<div class="r t">57.15</div>
+<div class="r t">75.67</div>
+<div class="r t">81.21</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1502</div>
+<div class="r t">18.37</div>
+<div class="r t">24.33</div>
+<div class="r t">62.01</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6174</div>
+<div class="r t">75.52</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1081</div>
+<div class="r t">13.22</div>
+<div class="r t">54.02</div>
+<div class="r t">18.79</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">920</div>
+<div class="r t">11.25</div>
+<div class="r t">45.98</div>
+<div class="r t">37.99</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2001</div>
+<div class="r t">24.48</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of DEPRESSION by RATEHEALTH</p>
+</div>
+<article id="IDX19" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">339.7161</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">323.3633</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Continuity Adj. Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">338.6785</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">339.6745</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.2039</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.1997</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.2039</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX20" aria-label="Fisher&amp;apos;s Exact Test">
+<h1 class="contentitem toc">Fisher&apos;s Exact Test</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fisher&apos;s Exact Test">
+<caption aria-label="Fisher&apos;s Exact Test"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fisher&apos;s Exact Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Cell (1,1) Frequency (F)</th>
+<td class="r data">4672</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Left-sided Pr &lt;= F</th>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Right-sided Pr &gt;= F</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Table Probability (P)</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Two-sided Pr &lt;= P</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX21" aria-label="Relative Risk Estimates">
+<h1 class="contentitem toc">Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Relative Risk Estimates">
+<caption aria-label="Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="r data">2.6473</th>
+<td class="r data">2.3824</td>
+<td class="r data">2.9415</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="r data">1.4007</th>
+<td class="r data">1.3420</td>
+<td class="r data">1.4620</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="r data">0.5291</th>
+<td class="r data">0.4960</td>
+<td class="r data">0.5645</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for DEPRESSION by RATEHEALTH</p>
+</div>
+<article id="IDX22" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">339.6745</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">1</td>
+<td class="r data">339.6745</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">1</td>
+<td class="r data">339.6745</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX23" aria-label="Common Relative Risk Estimates">
+<h1 class="contentitem toc">Common Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Common Relative Risk Estimates">
+<caption aria-label="Common Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Common Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Method</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">2.6473</td>
+<td class="r data">2.3824</td>
+<td class="r data">2.9415</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">2.6473</td>
+<td class="r data">2.3824</td>
+<td class="r data">2.9415</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">1.4007</td>
+<td class="r data">1.3420</td>
+<td class="r data">1.4620</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">1.4007</td>
+<td class="r data">1.3420</td>
+<td class="r data">1.4620</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.5291</td>
+<td class="r data">0.4960</td>
+<td class="r data">0.5645</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.5291</td>
+<td class="r data">0.4960</td>
+<td class="r data">0.5645</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX24">
+<h1 class="contentfolder toc">Table AGE_BINS * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;AGE_BINS&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">AGE_BINS</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2372</div>
+<div class="r t">29.02</div>
+<div class="r t">70.83</div>
+<div class="r t">41.23</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">977</div>
+<div class="r t">11.95</div>
+<div class="r t">29.17</div>
+<div class="r t">40.34</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3349</div>
+<div class="r t">40.97</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1779</div>
+<div class="r t">21.76</div>
+<div class="r t">71.79</div>
+<div class="r t">30.92</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">699</div>
+<div class="r t">8.55</div>
+<div class="r t">28.21</div>
+<div class="r t">28.86</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2478</div>
+<div class="r t">30.31</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">2</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1602</div>
+<div class="r t">19.60</div>
+<div class="r t">68.23</div>
+<div class="r t">27.85</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">746</div>
+<div class="r t">9.13</div>
+<div class="r t">31.77</div>
+<div class="r t">30.80</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2348</div>
+<div class="r t">28.72</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of AGE_BINS by RATEHEALTH</p>
+</div>
+<article id="IDX25" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">2</td>
+<td class="r data">7.9038</td>
+<td class="r data">0.0192</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">2</td>
+<td class="r data">7.8585</td>
+<td class="r data">0.0197</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">3.6983</td>
+<td class="r data">0.0545</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.0311</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.0311</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.0311</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for AGE_BINS by RATEHEALTH</p>
+</div>
+<article id="IDX26" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">3.6983</td>
+<td class="r data">0.0545</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">2</td>
+<td class="r data">7.9029</td>
+<td class="r data">0.0192</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">2</td>
+<td class="r data">7.9029</td>
+<td class="r data">0.0192</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX27">
+<h1 class="contentfolder toc">Table COLLEGE * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;COLLEGE&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">COLLEGE</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">673</div>
+<div class="r t">8.23</div>
+<div class="r t">48.91</div>
+<div class="r t">11.70</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">703</div>
+<div class="r t">8.60</div>
+<div class="r t">51.09</div>
+<div class="r t">29.03</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1376</div>
+<div class="r t">16.83</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5080</div>
+<div class="r t">62.14</div>
+<div class="r t">74.72</div>
+<div class="r t">88.30</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1719</div>
+<div class="r t">21.03</div>
+<div class="r t">25.28</div>
+<div class="r t">70.97</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6799</div>
+<div class="r t">83.17</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of COLLEGE by RATEHEALTH</p>
+</div>
+<article id="IDX28" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">365.5589</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">339.8762</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Continuity Adj. Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">364.3221</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">365.5141</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data" style="white-space: nowrap">-0.2115</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.2069</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data" style="white-space: nowrap">-0.2115</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX29" aria-label="Fisher&amp;apos;s Exact Test">
+<h1 class="contentitem toc">Fisher&apos;s Exact Test</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fisher&apos;s Exact Test">
+<caption aria-label="Fisher&apos;s Exact Test"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fisher&apos;s Exact Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Cell (1,1) Frequency (F)</th>
+<td class="r data">673</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Left-sided Pr &lt;= F</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Right-sided Pr &gt;= F</th>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Table Probability (P)</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Two-sided Pr &lt;= P</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX30" aria-label="Relative Risk Estimates">
+<h1 class="contentitem toc">Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Relative Risk Estimates">
+<caption aria-label="Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="r data">0.3239</th>
+<td class="r data">0.2876</td>
+<td class="r data">0.3649</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="r data">0.6546</th>
+<td class="r data">0.6191</td>
+<td class="r data">0.6921</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="r data">2.0207</th>
+<td class="r data">1.8919</td>
+<td class="r data">2.1584</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for COLLEGE by RATEHEALTH</p>
+</div>
+<article id="IDX31" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">365.5141</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">1</td>
+<td class="r data">365.5141</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">1</td>
+<td class="r data">365.5141</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX32" aria-label="Common Relative Risk Estimates">
+<h1 class="contentitem toc">Common Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Common Relative Risk Estimates">
+<caption aria-label="Common Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Common Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Method</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.3239</td>
+<td class="r data">0.2876</td>
+<td class="r data">0.3649</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.3239</td>
+<td class="r data">0.2876</td>
+<td class="r data">0.3649</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.6546</td>
+<td class="r data">0.6191</td>
+<td class="r data">0.6921</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.6546</td>
+<td class="r data">0.6191</td>
+<td class="r data">0.6921</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">2.0207</td>
+<td class="r data">1.8919</td>
+<td class="r data">2.1584</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">2.0207</td>
+<td class="r data">1.8919</td>
+<td class="r data">2.1584</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+<section id="IDX33">
+<h1 class="contentfolder toc">Table CHRONIC * RATEHEALTH</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Percent</div>
+<div class="t">Row Pct</div>
+<div class="t">Col Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;CHRONIC&#160;by&#160;RATEHEALTH</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">CHRONIC</th>
+<th class="c b header" colspan="3" scope="colgroup">RATEHEALTH</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1667</div>
+<div class="r t">20.39</div>
+<div class="r t">88.81</div>
+<div class="r t">28.98</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">210</div>
+<div class="r t">2.57</div>
+<div class="r t">11.19</div>
+<div class="r t">8.67</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1877</div>
+<div class="r t">22.96</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4086</div>
+<div class="r t">49.98</div>
+<div class="r t">64.88</div>
+<div class="r t">71.02</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2212</div>
+<div class="r t">27.06</div>
+<div class="r t">35.12</div>
+<div class="r t">91.33</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6298</div>
+<div class="r t">77.04</div>
+<div class="r t">&#160;</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5753</div>
+<div class="r t">70.37</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2422</div>
+<div class="r t">29.63</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8175</div>
+<div class="r t">100.00</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Statistics for Table of CHRONIC by RATEHEALTH</p>
+</div>
+<article id="IDX34" aria-label="Chi-Square Tests">
+<h1 class="contentitem toc">Chi-Square Tests</h1>
+<table class="table" style="border-spacing: 0" aria-label="Chi-Square Tests">
+<caption aria-label="Chi-Square Tests"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">397.3048</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Likelihood Ratio Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">455.1616</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Continuity Adj. Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">396.1577</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Mantel-Haenszel Chi-Square</th>
+<td class="r data">1</td>
+<td class="r data">397.2562</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Phi Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.2205</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Contingency Coefficient</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.2153</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Cramer&apos;s V</th>
+<td class="r data">&#160;</td>
+<td class="r data">0.2205</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX35" aria-label="Fisher&amp;apos;s Exact Test">
+<h1 class="contentitem toc">Fisher&apos;s Exact Test</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fisher&apos;s Exact Test">
+<caption aria-label="Fisher&apos;s Exact Test"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fisher&apos;s Exact Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Cell (1,1) Frequency (F)</th>
+<td class="r data">1667</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Left-sided Pr &lt;= F</th>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Right-sided Pr &gt;= F</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Table Probability (P)</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Two-sided Pr &lt;= P</th>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX36" aria-label="Relative Risk Estimates">
+<h1 class="contentitem toc">Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Relative Risk Estimates">
+<caption aria-label="Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="r data">4.2974</th>
+<td class="r data">3.6893</td>
+<td class="r data">5.0056</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="r data">1.3689</th>
+<td class="r data">1.3361</td>
+<td class="r data">1.4025</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="r data">0.3185</th>
+<td class="r data">0.2792</td>
+<td class="r data">0.3634</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Sample Size = 8175</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">Summary Statistics for CHRONIC by RATEHEALTH</p>
+</div>
+<article id="IDX37" aria-label="Cochran-Mantel-Haenszel Statistics">
+<h1 class="contentitem toc">Cochran-Mantel-Haenszel Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Cochran-Mantel-Haenszel Statistics">
+<caption aria-label="Cochran-Mantel-Haenszel Statistics"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Cochran-Mantel-Haenszel&#160;Statistics&#160;(Based&#160;on&#160;Table&#160;Scores)</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Alternative Hypothesis</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" scope="col">Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">Nonzero Correlation</th>
+<td class="r data">1</td>
+<td class="r data">397.2562</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Row Mean Scores Differ</th>
+<td class="r data">1</td>
+<td class="r data">397.2562</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">General Association</th>
+<td class="r data">1</td>
+<td class="r data">397.2562</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX38" aria-label="Common Relative Risk Estimates">
+<h1 class="contentitem toc">Common Relative Risk Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Common Relative Risk Estimates">
+<caption aria-label="Common Relative Risk Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Common Odds Ratio and Relative Risks</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Statistic</th>
+<th class="b header" scope="col">Method</th>
+<th class="r b header" scope="col">Value</th>
+<th class="r b header" colspan="2" scope="colgroup">95%&#160;Confidence&#160;Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Odds Ratio</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">4.2974</td>
+<td class="r data">3.6893</td>
+<td class="r data">5.0056</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">4.2974</td>
+<td class="r data">3.6893</td>
+<td class="r data">5.0056</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 1)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">1.3689</td>
+<td class="r data">1.3361</td>
+<td class="r data">1.4025</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">1.3689</td>
+<td class="r data">1.3361</td>
+<td class="r data">1.4025</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Risk (Column 2)</th>
+<th class="data">Mantel-Haenszel</th>
+<td class="r data">0.3185</td>
+<td class="r data">0.2792</td>
+<td class="r data">0.3634</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<th class="data">Logit</th>
+<td class="r data">0.3185</td>
+<td class="r data">0.2792</td>
+<td class="r data">0.3634</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Total Sample Size = 8175</p>
+</div>
+</section>
+</section>
+</div>
+</body>
+</html>
